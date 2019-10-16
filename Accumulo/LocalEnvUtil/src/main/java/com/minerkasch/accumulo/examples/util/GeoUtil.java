@@ -6,11 +6,9 @@ public class GeoUtil {
 
   /**
    * Encode a latitude and longitude into a z-point
-   * 
-   * @param latitude
-   *          - A string representation of the latitude
-   * @param longitude
-   *          - A string representation of the longitude
+   *
+   * @param latitude - A string representation of the latitude
+   * @param longitude - A string representation of the longitude
    * @return The encoded location (z-point)
    */
   public static String encodeLocation(String latitude, String longitude) {
@@ -38,9 +36,8 @@ public class GeoUtil {
 
   /**
    * Decode a z-point into a latitude and longitude
-   * 
-   * @param encodedLocation
-   *          - The encoded location (z-point)
+   *
+   * @param encodedLocation - The encoded location (z-point)
    * @return An array of doubles holding the latitude and longitude
    */
   public static double[] decodeLocation(String encodedLocation) {
@@ -57,19 +54,16 @@ public class GeoUtil {
     int maxDigits = (int) Math.pow(10, NUM_DIGITS);
 
     // Format the lat and long: remove the decimal point and zero pad
-    double dLat = deNormalizeLatitude(Double.valueOf(sLat.toString())
-        / maxDigits);
-    double dLong = deNormalizeLongitude(Double.valueOf(sLong.toString())
-        / maxDigits);
+    double dLat = deNormalizeLatitude(Double.valueOf(sLat.toString()) / maxDigits);
+    double dLong = deNormalizeLongitude(Double.valueOf(sLong.toString()) / maxDigits);
 
-    return new double[] { dLat, dLong };
+    return new double[] {dLat, dLong};
   }
 
   /**
    * Converts a latitude range from [-90, 90] to [0,180]
-   * 
-   * @param latitude
-   *          - A double representation of the latitude
+   *
+   * @param latitude - A double representation of the latitude
    * @return The normalized latitude
    */
   private static double normalizeLatitude(double latitude) {
@@ -78,9 +72,8 @@ public class GeoUtil {
 
   /**
    * Converts a longitude range from [-180,180] to [0,360]
-   * 
-   * @param longitude
-   *          - A double representation of the longitude
+   *
+   * @param longitude - A double representation of the longitude
    * @return The normalized longitude
    */
   private static double normalizeLongitude(double longitude) {
@@ -89,9 +82,8 @@ public class GeoUtil {
 
   /**
    * Converts a latitude range from [0,180] to [-90,90]
-   * 
-   * @param latitude
-   *          - A double representation of the latitude
+   *
+   * @param latitude - A double representation of the latitude
    * @return The denormalized latitude
    */
   private static double deNormalizeLatitude(double latitude) {
@@ -100,9 +92,8 @@ public class GeoUtil {
 
   /**
    * Converts a longitude range from [0,360] to [-180,180]
-   * 
-   * @param longitude
-   *          - A double representation of the longitude
+   *
+   * @param longitude - A double representation of the longitude
    * @return the denormalized longitude
    */
   private static double deNormalizeLongitude(double longitude) {
