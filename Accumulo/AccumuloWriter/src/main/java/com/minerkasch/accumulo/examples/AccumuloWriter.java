@@ -30,7 +30,7 @@ public class AccumuloWriter {
     }
 
     // Set the location of the twitter data
-    String dataDir = "/Users/zach/Development/AccumuloClass/AccumuloTraining/Accumulo/data";
+    String dataDir = args[0];
 
     // Get the names of all of the files containing twitter data
     File[] files =

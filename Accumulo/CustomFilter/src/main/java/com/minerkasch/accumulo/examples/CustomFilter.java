@@ -66,7 +66,7 @@ public class CustomFilter extends Filter {
   public boolean accept(Key k, Value v) {
     // If the current value is less than maxValue and greater than minValue
     // return true
-	  return Long.valueOf(v.toString()) < this.maxValue && Long.valueOf(v.toString()) > this.minValue;
+    return Long.valueOf(v.toString()) < this.maxValue && Long.valueOf(v.toString()) > this.minValue;
 
     // If the current value is not within range, return false
   }
