@@ -23,6 +23,7 @@
         <module>CustomConstraint</module>
         <module>SparkRead</module>
         <module>SparkWrite</module>
+        <module>SparkOfflineUpdate</module>
     </modules>
 
     <properties>

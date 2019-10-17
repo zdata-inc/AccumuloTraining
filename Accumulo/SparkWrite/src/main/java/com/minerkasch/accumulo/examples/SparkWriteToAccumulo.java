@@ -73,11 +73,11 @@ public class SparkWriteToAccumulo {
     Job job = new Job();
     Configuration configuration = job.getConfiguration();
 
-    Class<?> inputFormatClass = AccumuloOutputFormat.class;
+    Class<?> outputFormatClass = AccumuloOutputFormat.class;
 
     // Set the output format
     OutputConfigurator.setZooKeeperInstance(
-        inputFormatClass,
+        outputFormatClass,
         configuration,
         new ClientConfiguration()
             .withInstance(Constants.INSTANCE)
@@ -85,15 +85,15 @@ public class SparkWriteToAccumulo {
 
     // Set the connection settings
     OutputConfigurator.setConnectorInfo(
-        inputFormatClass,
+        outputFormatClass,
         configuration,
         Constants.USER_NAME,
         new PasswordToken(Constants.USER_PASS));
 
     // Set the output table
-    OutputConfigurator.setCreateTables(inputFormatClass, configuration, true);
+    OutputConfigurator.setCreateTables(outputFormatClass, configuration, true);
     OutputConfigurator.setDefaultTableName(
-        inputFormatClass, configuration, Constants.TWITTER_SPARK_TABLE);
+        outputFormatClass, configuration, Constants.TWITTER_SPARK_TABLE);
 
     mutations.saveAsNewAPIHadoopFile(
         "/", Text.class, Mutation.class, AccumuloOutputFormat.class, job.getConfiguration());

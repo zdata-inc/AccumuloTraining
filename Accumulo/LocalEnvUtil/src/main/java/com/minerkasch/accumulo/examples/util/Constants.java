@@ -10,6 +10,8 @@ public class Constants {
   // Table names
   public static final String TWITTER_TABLE = "zach.TwitterData";
   public static final String TWITTER_SPARK_TABLE = "zach.SparkTwitterData";
+  public static final String TWITTER_SPARK_TABLE_CLONE = "zach.SparkTwitterDataClone";
+  public static final String TWITTER_SPARK_TABLE_FREQUENCY = "zach.SparkTwitterDataFrequency";
   public static final String TWEET_INDEX_TABLE = "zach.TweetIndex";
   public static final String TWEET_LOCATION_INDEX_TABLE = "zach.TweetLocationIndex";
 }
