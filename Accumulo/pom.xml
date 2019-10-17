@@ -21,13 +21,14 @@
         <module>CustomCombiner</module>
         <module>CustomFilter</module>
         <module>CustomConstraint</module>
+        <module>SparkRead</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <junit.version>4.11</junit.version>
         <accumulo.version>1.9.3</accumulo.version>
-        <hadoop-client.version>2.7.1</hadoop-client.version>
+        <hadoop-client.version>2.8.5</hadoop-client.version>
     </properties>
 
     <dependencies>
