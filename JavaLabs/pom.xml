@@ -21,10 +21,6 @@
         <module>CustomCombiner</module>
         <module>CustomFilter</module>
         <module>CustomConstraint</module>
-        <module>SparkRead</module>
-        <module>SparkWrite</module>
-        <module>SparkOfflineUpdate</module>
-        <module>SparkBulkLoad</module>
         <module>Spark</module>
     </modules>
 
